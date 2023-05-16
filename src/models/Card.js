@@ -3,14 +3,16 @@ class PokemonCard {
 
     static type = 'Pokemon';
 
+    // this is used so that the SearchList component can figure out which card details to make based on which type it is
     get type(){
         return PokemonCard.type;
     }
 
+   // gets the small parameter for the right image if applicable
     get smallImage(){
         return this.images?.small
     }
-
+    // gets the large parameter for the right image if applicable
     get largeImage() {
         return this.images?.large
     }
@@ -28,6 +30,8 @@ class PokemonCard {
         // on the website that will be linked to this
         nameForLink = '';
 
+        // this method creates a version of the card's name by changing characters so that it matches the link on
+       // the API's home website
         get linkName()
         {
             this.nameForLink = this.name
